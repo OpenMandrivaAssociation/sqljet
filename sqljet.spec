@@ -1,6 +1,6 @@
 Name:           sqljet
 Version:        1.0.4
-Release:        2
+Release:        4
 Summary:        Pure Java SQLite
 
 Group:          Development/Java
