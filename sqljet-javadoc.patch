@@ -1,0 +1,27 @@
+--- build.xml.orig	2009-11-18 03:30:24.000000000 +0200
++++ build.xml	2009-11-26 13:12:39.562877717 +0200
+@@ -340,4 +340,23 @@ public class SqlParser</replacevalue>
+ 			<sysproperty key="SqlJetBtreeTableTest.REPEATS_COUNT" value="100" />
+ 		</junit>
+ 	</target>
++ <target name="jars" depends="clean, compile, compile-examples">
++        <mkdir dir="build" />
++    	<!-- update svnkit.build.properties here -->
++    	<antcall target="init-build.number"/>
++
++	<jar destfile="build/sqljet.jar">
++            <fileset dir="sqljet/bin">
++                <include name="**/**"/>
++            </fileset>
++            <fileset dir="build">
++                <include name="sqljet.build.properties"/>
++            </fileset>
++        </jar>
++	<jar destfile="build/sqljet-browser.jar" >
++            <fileset dir="sqljet-examples/browser/bin">
++                <include name="**/**"/>
++            </fileset>
++        </jar>
++        </target>
+ </project>
+\ No newline at end of file
