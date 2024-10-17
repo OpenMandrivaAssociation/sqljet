@@ -5,7 +5,7 @@ Summary:        Pure Java SQLite
 
 Group:          Development/Java
 License:        GPLv2
-URL:            http://sqljet.com/
+URL:            https://sqljet.com/
 # Obtained by sh fetch-sqljet.sh
 Source0:        %{name}-%{version}.tar.xz
 Source1:        fetch-sqljet.sh
